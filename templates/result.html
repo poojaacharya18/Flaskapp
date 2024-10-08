@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        .data { border-collapse: collapse; width: 100%; }
+        .data th, .data td { border: 1px solid black; padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+    <h1>Results</h1>
+    {% for table in tables %}
+        <div>{{ titles[loop.index0] }}</div>
+        {{ table|safe }}
+    {% endfor %}
+</body>
+</html>
